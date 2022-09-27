@@ -1,5 +1,5 @@
 # Snake_game
-It's the test of the snake game made on pygame for about a hour
+It's the test of the snake game made on pygame for about a hour and then optimized
 
 Updating log:
 
