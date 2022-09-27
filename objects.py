@@ -82,9 +82,9 @@ class Score:
 
 class Apple:
     def __init__(self):
-        self.size = 25
-        self.x = randrange(55, 550, self.size)
-        self.y = randrange(55, 600, self.size)
+        self.size = 30
+        self.x = randrange(30, 540, self.size)
+        self.y = randrange(60, 600, self.size)
         self.delete = False
 
     def draw(self, scr):

@@ -45,7 +45,7 @@ while run:
     if snake.game_over:
         gameOver = Text("Times New Roman", 40, f"Game Over! Your score was {score_counter.i}", pg.Color("red"),
                         (35, 175))
-        restartHint = Text("Times New Roman", 50, "Print R to restart", pg.Color("red"), (150, 325))
+        restartHint = Text("Times New Roman", 50, "Print R to restart", pg.Color("red"), (125, 325))
         screen.fill(pg.Color("black"))
         del apple, snake
         gameOver.draw(screen)
@@ -70,13 +70,13 @@ while run:
 
     else:
         snake.is_lose()
-        snake.update(scr=screen)
-        """Updating Apple object & checking out whether snake's head touching it, 
-            then increasing length of the snake and score, delete apple """
         apple.update(scr=screen, snake_=snake, score=score_counter)
         if apple.delete is True:
             del apple
             apple = Apple()
+        snake.update(scr=screen)
+        """Updating Apple object & checking out whether snake's head touching it, 
+            then increasing length of the snake and score, delete apple """
 
         # Rendering text for score and putting it on the screen if game is not over
         Text("Arial", 44, f"Score : {score_counter.i}", pg.Color('gold'),
